@@ -1,0 +1,138 @@
+body
+{
+    /* Background pattern from Toptal Subtle Patterns */
+    background-image: url("img/tlo.png");
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    /*duża wartość gdyż strona w formie prezentacji slajdów*/
+    font-size: 20px;
+}
+a:link
+{
+    color:black;
+    text-decoration: none;
+}
+a:visited
+{
+    color:black;
+    text-decoration: none;
+}
+a:hover
+{
+    color:#485b3b;
+    text-decoration: underline;
+}
+a:active
+{
+    color:#485b3b;
+    text-decoration: underline;
+}
+
+#logo
+{
+    width: 100%;
+    height: 50px;
+    background-color: #485b3b;
+    font-size: 32px;
+    color:white;
+    text-align: center;
+    text-transform: uppercase;
+    /*układ kartezjański ale pierwsze leci "Y" czyli y x y x
+    od góry y potem prawa x potem dół y potem lewa x (+)
+    */
+    padding: 5px 0px 5px 0px;
+    letter-spacing: 3px;
+    border-bottom: 2px solid #33402a;
+    /*kontury dla tekstu aby ładniej wyglądało outline*/
+    text-shadow:
+    /*pokolei, pierwsza ćwiartka układu kartezjańskiego (+) cechuje się że obie współrzędne dodatnie, ostatnia liczba to wartość blurr tutaj już numerujemy ćwiartki zgodnie z wzorem kartezjańskim czyli odwrotnie do wskazówek zegara*/
+    2px 2px 0 #33402a,
+    -2px 2px 0 #33402a,
+    -2px -2px 0 #33402a,
+    2px -2px 0 #33402a;
+
+}
+#containter
+{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    width: 878px;
+    padding: 10px;
+    /*uzyskanie odcięcia kontentu od tła*/
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000 ;
+}
+#spis
+{
+    width: 780px;
+    padding-left: 100px;
+
+
+}
+ol
+{
+    
+    font-size: 22px;
+    margin-top: 5px;
+    font-weight: 700;
+    padding: 5px;
+    letter-spacing: 3px;
+
+}
+ol > li
+{
+    text-transform: uppercase;
+}
+ol > li > ul
+{
+    font-size: 18px;
+    text-transform: none;
+    font-weight: 400;
+    padding: 0px;
+    letter-spacing: 0px;
+    margin-top: 5px;
+    margin-left: 30px;
+    /*to służy do zmiany sposobu punktowania lub numerowania listy*/
+    list-style-type: none;
+}
+ol > li > ul > li
+{
+    margin: 0px;
+    color:  #33402a;
+}
+/*co ma się tu pojawić zanim pojawi się tekst czyli w sumie edytuje znacznik?*/
+ol > li > ul > li:before
+{
+    color:  #33402a;
+    content: "♡";
+    margin-right: 5px;
+}
+.slajd
+{
+    /* pierwszy to na y czyli góra i dół potem na osi x czyli lewo prawo*/
+    padding: 20px 40px;
+    text-align: justify;
+
+}
+h1
+{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+.scrollup
+{
+    width:64px;
+    height:64px;
+    text-decoration: none;
+    /*no repeat pozwala aby jeśli rozmiar przekroczy wartość obrazka to że go nie powiela te liczby na końcu to współrzędne od których masz zacząć wypełnianie pola obrazkiem*/
+    background: url("img/up.png") no-repeat 0px 0px;
+    position: fixed /*przypisana na stałę*/;
+    right: 50px; /*50px odstępu od prawej krawędzi*/
+    bottom: 50px; /*od dolnej krawędzi*/
+    display: none; /*tutaj go wygaszamy a w JQUERY okodowane kiedy ma się pojawić*/
+
+}
+
